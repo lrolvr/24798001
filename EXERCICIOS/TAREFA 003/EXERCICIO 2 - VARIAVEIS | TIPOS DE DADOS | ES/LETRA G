@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    float P, V, T, M;
+
+    printf("Digite a pressao em psi: ");
+    scanf("%f", &P);
+
+    printf("Digite o volume em litros: ");
+    scanf("%f", &V);
+
+    printf("Digite a temperatura em graus Fahrenheit: ");
+    scanf("%f", &T);
+
+    M = (P*V)/(0.37*(T+460));
+
+    printf("A massa de ar do pneu e: %.2f\n", M);
+
+    return 0;
+}
