@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    char nome[15];
+    int idade, dias, calculo;
+
+    printf("Qual e o seu nome: ");
+    scanf("%s", &nome);
+
+    printf("\nQual e sua idade?: ");
+    scanf("%d", &idade);
+
+    calculo = idade * 365;
+
+    printf("\n\n%s, voce possui aproximadamente %d dias de vida!\n", nome, calculo);
+
+    return 0;
+}
+
