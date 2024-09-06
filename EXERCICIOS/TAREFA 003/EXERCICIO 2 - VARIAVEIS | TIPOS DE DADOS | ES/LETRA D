@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    float raio, area;
+    const float PI = 3.14159;
+
+    printf("Digite o raio do circulo em metros: ");
+    scanf("%f", &raio);
+    area = PI * raio * raio;
+
+    printf("\n\nA area do circulo e: %.2f metros quadrados\n", area);
+    return 0;
+}
