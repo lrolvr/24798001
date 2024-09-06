@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+
+    printf("Digite um número: "); 
+    scanf("%d", &a); 
+    printf("Você digitou: %d\n", a); 
+
+    return 0;
+}
