@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int primeiro_termo, razao, N, termo_N;
+
+    printf("Digite o primeiro termo da PA: ");
+    scanf("%d", &primeiro_termo);
+
+    printf("Digite a razao da PA: ");
+    scanf("%d", &razao);
+
+    printf("Digite o numero N: ");
+    scanf("%d", &N);
+
+    termo_N = primeiro_termo + (N - 1) * razao;
+
+    printf("O %d-esimo termo da PA e: %d\n", N, termo_N);
+
+    return 0;
+}
