@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+
+    float pa1 = 24.13, pa2 = 11.00, pa3 = 38.65;
+    float da1 = 17.00, da2 = 35.00, da3 = 25.00;
+    int qa1, qa2, qa3;
+    float vi1, vi2, vi3;
+    float dy1, dy2, dy3;
+
+    printf("Digite a quantidade de acoes da acao 1 que deseja comprar: ");
+    scanf("%d", &qa1);
+
+    printf("Digite a quantidade de acoes da acao 2 que deseja comprar: ");
+    scanf("%d", &qa2);
+
+    printf("Digite a quantidade de acoes da acao 3 que deseja comprar: ");
+    scanf("%d", &qa3);
+
+    vi1 = pa1 * qa1;
+    vi2 = pa2 * qa2;
+    vi3 = pa3 * qa3;
+
+    dy1 = (da1 / pa1) * 100;
+    dy2 = (da2 / pa2) * 100;
+    dy3 = (da3 / pa3) * 100;
+
+    printf("\n\nDividend Yield acao 1: %.2f%%\n", dy1);
+    printf("Dividend Yield acao 2: %.2f%%\n", dy2);
+    printf("Dividend Yield acao 3: %.2f%%\n", dy3);
+
+    return 0;
+
+}
