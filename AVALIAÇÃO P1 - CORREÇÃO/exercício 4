@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+
+  int temp;
+
+  printf("Insira a temperatura atual em graus Celsius: \n");
+  scanf("%d", &temp);
+
+  if(temp<=0){
+    printf("Geleira - Temperatura muito fria!\n");
+  }else if(temp>=1 && temp<=15){
+    printf("Frio - Pode precisar de um casaco!\n");
+  } else if(temp>=16 && temp<=25){
+    printf("Agradável - Tempo bom para sair!\n");
+  } else if(temp>=25 && temp<=35){
+    printf("Quente - Ótimo para um dia de praia!\n");
+  } else{
+    printf("Muito Quente - Mantenha-se hidratado!\n");
+  }
+
+return 0;
+}
