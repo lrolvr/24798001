@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int valor, celsius;
+
+    printf("Digite o valor em graus Fahrenheit: \n");
+    scanf("%d", &valor);
+
+    
+    celsius = (valor - 32) * (5/9);
+
+    printf("O valor em graus Celsius é: %d\n", celsius);
+
+    return 0;
+}
+
+// Como ambos os números são inteiros, a divisão inteira acontece, resultando em 0, porque 5 dividido por 9 é menor que 1 (e a divisão de inteiros descarta a parte decimal). 
