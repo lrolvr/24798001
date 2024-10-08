@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+
+  int temp;
+
+  printf("Digite a temperatura atual do depósito: \n");
+  scanf("%d", &temp);
+
+  if(temp<-10){
+    printf("Risco baixo - Armazenamento ideal para alimentos congelados.");
+  }else if(temp>=-10 && temp<=0){
+    printf("Risco moderado - Condições aceitáveis para armazenamento refrigerado.");
+  } else if((temp>=1 && temp<=10) || (temp ==15)){
+    printf("Risco elevado - Monitore a temperatura.");
+  } else if (temp>10 && temp!=15){
+    printf("Risco crítico - Ação Imediata Necessária!");
+  }
+
+return 0;
+}
