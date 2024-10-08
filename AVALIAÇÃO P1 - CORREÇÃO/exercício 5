@@ -13,7 +13,7 @@ int main(){
     printf("Risco moderado - Condições aceitáveis para armazenamento refrigerado.");
   } else if((temp>=1 && temp<=10) || (temp ==15)){
     printf("Risco elevado - Monitore a temperatura.");
-  } else if (temp>10 && temp!=15){
+  } else if(temp>10 && temp!=15){
     printf("Risco crítico - Ação Imediata Necessária!");
   }
 
