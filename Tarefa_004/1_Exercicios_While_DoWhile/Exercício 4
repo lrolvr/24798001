@@ -9,7 +9,8 @@ int main() {
         printf("\nInsira o valor do deposito inicial: ");
         scanf("%f", &deposito);
 
-        if(deposito < minimo){
+        if(deposito < minimo)
+        {
             printf("ERRO. Deposito menor que o valor minimo de 500.");
         }
 
