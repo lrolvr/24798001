@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int meta = 10000;
+    int passos = 0;
+    int soma = 0;
+
+    do{
+        if(soma < meta){
+
+            printf("\nInsira o numero de passos dados: ");
+            scanf("%d", &passos);
+
+            soma = soma + passos;
+
+            printf("\nQuantidade de passos ate o momento: %d", soma);
+        }
+
+        else
+        {
+            printf("Meta atingida.");
+        }
+
+
+    } while(soma < meta);
+
+    printf("\n\nMeta de passos diarios atingida.\n");
+    printf("\nQuantidade de passos total: %d", soma);
+
+    return 0;
+}
+
+
+
+
