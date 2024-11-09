@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float deposito;
+    int minimo = 500;
+
+    do{
+
+        printf("\nInsira o valor do deposito inicial: ");
+        scanf("%f", &deposito);
+
+        if(deposito < minimo){
+            printf("ERRO. Deposito menor que o valor minimo de 500.");
+        }
+
+    } while(deposito < minimo);
+
+        printf("Deposito inicial realizado");
+
+    return 0;
+}
