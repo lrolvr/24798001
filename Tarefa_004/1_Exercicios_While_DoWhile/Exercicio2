@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float nivel;
+
+    do{
+        printf("Digite o nivel de combustivel (em %): ");
+        scanf("%f", &nivel);
+
+        if (nivel < 15) {
+            printf("Alerta: Tanque abaixo do nivel. Abasteca.\n");
+        } else {
+            printf("Nivel de combustivel ok.\n");
+        }
+
+    } while (nivel < 100);
+
+    printf("O tanque esta cheio.\n");
+
+    return 0;
+}
