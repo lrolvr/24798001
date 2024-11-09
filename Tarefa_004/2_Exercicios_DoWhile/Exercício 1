@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    char comando;
+
+    printf("Controle de movimento do robo\n");
+    printf("Comandos disponiveis: f (frente), t (tras), e (esquerda), d (direita), s (sair)\n");
+
+    do {
+        printf("\nDigite um comando: ");
+        scanf(" %c", &comando);
+
+        switch (comando) {
+            case 'f':
+                printf("Movendo-se para frente.\n");
+                break;
+            case 't':
+                printf("Movendo-se para tras.\n");
+                break;
+            case 'e':
+                printf("Movendo-se para a esquerda.\n");
+                break;
+            case 'd':
+                printf("Movendo-se para a direita.\n");
+                break;
+            case 's':
+                printf("Programa encerrado.\n");
+                break;
+            default:
+                printf("Comando invalido! Tente novamente.\n");
+                break;
+        }
+
+
+    } while (comando != 's');
+
+    return 0;
+}
