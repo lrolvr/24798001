@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int x = 2, y = 2;
+    char comando;
+
+    do {
+        printf("Posição atual: (%d, %d)\n", x, y);
+        printf("Comandos: W (cima), S (baixo), A (esquerda), D (direita), Q (sair)\n");
+        scanf(" %c", &comando);
+
+        if (comando == 'W' || comando == 'w') {
+            if (y > 0) y--;
+            else printf("Movimento inválido!\n");
+        } else if (comando == 'S' || comando == 's') {
+            if (y < 4) y++;
+            else printf("Movimento inválido!\n");
+        } else if (comando == 'A' || comando == 'a') {
+            if (x > 0) x--;
+            else printf("Movimento inválido!\n");
+        } else if (comando == 'D' || comando == 'd') {
+            if (x < 4) x++;
+            else printf("Movimento inválido!\n");
+        } else if (comando != 'Q' && comando != 'q') {
+            printf("Comando inválido!\n");
+        }
+    } while (comando != 'Q' && comando != 'q');
+
+    printf("Navegação encerrada.\n");
+    return 0;
+}
+
