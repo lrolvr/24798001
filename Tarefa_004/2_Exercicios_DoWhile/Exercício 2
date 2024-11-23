@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+double lerSensorDistancia() {
+    return 5 + rand() % 46;
+}
+
+int main() {
+    double distancia;
+    char continuar;
+
+    do {
+        distancia = lerSensorDistancia();
+        printf("Distância medida: %.2f cm\n", distancia);
+
+        if (distancia < 10) {
+            printf("Alerta: Distância inferior a 10 cm detectada!\n");
+        }
+
+        printf("Deseja continuar a leitura? (S/N): ");
+        scanf(" %c", &continuar);
+
+    } while (continuar == 'S' || continuar == 's');
+
+    printf("Leitura encerrada.\n");
+    return 0;
+}
