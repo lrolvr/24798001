@@ -1,0 +1,38 @@
+1) Como declarar o vetor "cameraData"?
+int cameraData[10];
+
+2) Função de cameraData[3] = analogRead(A1);
+Lê o valor analógico do pino A1 e o armazena na quarta posição do vetor cameraData.
+
+3) Como inicializar o vetor "temperaturas"?
+float temperaturas[] = {25.5, 26.0, 24.8, 27.3, 26.5};
+
+4) Função do código do for na questão 4?
+Imprime os valores do vetor ledPins nas quatro primeiras posições via Serial.println.
+
+5) Estrutura necessária para executar o código da questão 4?
+int ledPins[] = {2, 3, 4, 5}; 
+void setup() {
+    Serial.begin(9600);
+    for (int i = 0; i < 4; i++) {
+        Serial.println(ledPins[i]);
+    }
+}
+void loop() {}
+
+6) Como usar random() para preencher "randomValues"?
+int randomValues[5];
+for (int i = 0; i < 5; i++) {
+    randomValues[i] = random(0, 100); // Exemplo: números entre 0 e 99
+}
+
+7) Descreva a implementação do código a seguir:
+for ( int i = 0; i < tamanhoVetor ; i ++) {
+  if ( sensorReadings [ i ] == 150) {
+    break ;
+  }
+}
+Percorre o vetor sensorReadings e interrompe o laço ao encontrar o valor 150.
+
+8) Função de sizeof(sensorData) / sizeof(sensorData[0])?
+Calcula o número de elementos do vetor sensorData dividindo o tamanho total do vetor pelo tamanho de um elemento.
