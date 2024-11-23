@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int nivelBateria;
+
+    do {
+        printf("Digite o nível da bateria (0 a 100): ");
+        scanf("%d", &nivelBateria);
+
+        if (nivelBateria <= 20) {
+            printf("Aviso: Bateria baixa!\n");
+        }
+    } while (nivelBateria <= 20);
+
+    printf("Bateria suficiente.\n");
+    return 0;
+}
