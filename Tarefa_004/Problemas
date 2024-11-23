@@ -1,0 +1,44 @@
+a. Como você interpreta os dados contidos na primeira linha da matriz ambientData em relação à temperatura?
+Os dados na primeira linha representam as temperaturas medidas (em graus Celsius) nos cinco momentos registrados no primeiro local de monitoramento:
+22°C, 25°C, 23°C, 21°C, 24°C.
+
+b. Qual é a média da umidade do solo nos cinco momentos registrados no segundo local de monitoramento?
+A média é calculada somando os valores e dividindo pelo número de leituras:
+Média= (45+38+42+40+37)/5 = 40.4%
+
+c. Determine o momento em que a concentração de CO2 atingiu seu valor máximo no terceiro local de monitoramento.
+Os valores de CO2 no terceiro local são: 400, 380, 420, 410, 390.
+O valor máximo é 420, registrado no terceiro momento (índice 2).
+
+d. Trecho de código Arduino para calcular e imprimir a média de temperatura em todos os locais monitorados:
+Código completo:
+
+int ambientData[3][5] = {
+    {22, 25, 23, 21, 24},
+    {45, 38, 42, 40, 37},
+    {400, 380, 420, 410, 390}
+};
+
+void setup() {
+    Serial.begin(9600);
+    int totalLocais = 3;
+    int totalLeituras = 5;
+    int somaTemperaturas = 0;
+
+    for (int i = 0; i < totalLocais; i++) {
+        for (int j = 0; j < totalLeituras; j++) {
+            somaTemperaturas += ambientData[0][j]; // Considera apenas a linha de temperatura
+        }
+    }
+
+    float mediaTemperaturas = somaTemperaturas / float(totalLeituras);
+    Serial.print("Média de temperatura: ");
+    Serial.println(mediaTemperaturas);
+}
+
+void loop() {}
+Explicação do código:
+O código inicializa a matriz ambientData com os dados fornecidos.
+O laço percorre apenas a primeira linha da matriz (temperatura).
+Soma os valores de temperatura e calcula a média dividindo pela quantidade de leituras.
+O resultado é impresso no monitor serial.
