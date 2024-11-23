@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void controleMovimento() {
+    int x = 5, y = 5;
+    char comando;
+    printf("Robô no espaço 10x10. Posição inicial: (%d, %d)\n", x, y);
+    do {
+        printf("Comandos: W (cima), S (baixo), A (esquerda), D (direita), Q (sair)\n");
+        scanf(" %c", &comando);
+        if (comando == 'W' || comando == 'w') y = (y > 0) ? y - 1 : y;
+        if (comando == 'S' || comando == 's') y = (y < 9) ? y + 1 : y;
+        if (comando == 'A' || comando == 'a') x = (x > 0) ? x - 1 : x;
+        if (comando == 'D' || comando == 'd') x = (x < 9) ? x + 1 : x;
+        printf("Posição atual: (%d, %d)\n", x, y);
+    } while (comando != 'Q' && comando != 'q');
+}
+
+void leituraSensores() {
+    double distancia;
+    char continuar;
+    do {
+        distancia = 5 + rand() % 46;
+        printf("Distância medida: %.2f cm\n", distancia);
+        if (distancia < 10) printf("Aviso: Distância inferior a 10 cm!\n");
+        printf("Deseja continuar a leitura? (S/N): ");
+        scanf(" %c", &continuar);
+    } while (continuar == 'S' || continuar == 's');
+}
+
+void controleAtuacao() {
+    int opcao;
+    do {
+        printf("1 - Ligar lâmpada\n");
+        printf("2 - Tocar som\n");
+        printf("3 - Mover braço\n");
+        printf("0 - Sair\n");
+        scanf("%d", &opcao);
+        if (opcao == 1) printf("Lâmpada ligada\n");
+        if (opcao == 2) printf("Som tocado\n");
+        if (opcao == 3) printf("Braço movido\n");
+    } while (opcao != 0);
+}
+
+void monitoramentoBateria() {
+    int nivelBateria;
+    do {
+        printf("Digite o nível da bateria (0 a 100): ");
+        scanf("%d", &nivelBateria);
+        if (nivelBateria <= 20) printf("Aviso: Bateria baixa!\n");
+    } while (nivelBateria <= 20);
+    printf("Bateria suficiente.\n");
+}
+
+void navegacaoAutonoma() {
+    int x = 2, y = 2;
+    char comando;
+    do {
+        printf("Posição atual: (%d, %d)\n", x, y);
+        printf("Comandos: W (cima), S (baixo), A (esquerda), D (direita), Q (sair)\n");
+        scanf(" %c", &comando);
+        if (comando == 'W' || comando == 'w') y = (y > 0) ? y - 1 : y;
+        if (comando == 'S' || comando == 's') y = (y < 4) ? y + 1 : y;
+        if (comando == 'A' || comando == 'a') x = (x > 0) ? x - 1 : x;
+        if (comando == 'D' || comando == 'd') x = (x < 4) ? x + 1 : x;
+    } while (comando != 'Q' && comando != 'q');
+}
+
+int main() {
+    int opcao;
+    do {
+        printf("Menu Principal\n");
+        printf("1 - Controle de Movimento\n");
+        printf("2 - Leitura de Sensores\n");
+        printf("3 - Controle de Atuação\n");
+        printf("4 - Monitoramento de Bateria\n");
+        printf("5 - Navegação Autônoma\n");
+        printf("0 - Sair\n");
+        scanf("%d", &opcao);
+
+        if (opcao == 1) controleMovimento();
+        if (opcao == 2) leituraSensores();
+        if (opcao == 3) controleAtuacao();
+        if (opcao == 4) monitoramentoBateria();
+        if (opcao == 5) navegacaoAutonoma();
+    } while (opcao != 0);
+
+    printf("Programa encerrado.\n");
+    return 0;
+}
