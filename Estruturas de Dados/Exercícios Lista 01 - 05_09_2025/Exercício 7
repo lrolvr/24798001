@@ -1,0 +1,31 @@
+#include <stdio.h>
+// Biblioteca padrão de entrada e saída
+
+int main(void) {
+    float n1, n2, n3, n4; 
+    // Variáveis para armazenar os quatro números reais
+
+    float media; 
+    // Variável para armazenar a média
+
+    // Solicita os números ao usuário
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &n1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &n2);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%f", &n3);
+
+    printf("Digite o quarto numero: ");
+    scanf("%f", &n4);
+
+    // Calcula a média
+    media = (n1 + n2 + n3 + n4) / 4.0;
+
+    // Exibe o resultado
+    printf("A media dos quatro numeros: %.2f\n", media);
+
+    return 0;  
+}
